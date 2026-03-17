@@ -26,7 +26,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            // Close mobile menu if open
             if (window.innerWidth <= 768) {
                 navLinks.style.display = 'none';
             }
@@ -45,11 +44,9 @@ function trackOrder() {
         return;
     }
     
-    // Simulate tracking lookup
     showTrackingResult('Looking up your order...', 'loading');
     
     setTimeout(() => {
-        // Mock tracking data
         const mockStatuses = [
             { status: 'Out for Delivery', location: 'Local Distribution Center', time: '10:30 AM' },
             { status: 'In Transit', location: 'Regional Hub', time: 'Yesterday, 8:45 PM' },
@@ -94,14 +91,12 @@ function showTrackingResult(content, type) {
     }
 }
 
-// Allow Enter key to submit tracking
 document.getElementById('trackingInput')?.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         trackOrder();
     }
 });
 
-// Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -109,27 +104,4 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
     }
-});
-
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.step, .service-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
 });

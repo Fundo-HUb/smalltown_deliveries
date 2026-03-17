@@ -186,7 +186,7 @@ body {
     50% { transform: translateY(-20px); }
 }
 
-/* How It Works - FIXED */
+/* How It Works - FIXED ALIGNMENT */
 .how-it-works {
     padding: 5rem 0;
     background: var(--white);

@@ -112,7 +112,6 @@ body {
 
 .highlight {
     color: var(--primary-green);
-    position: relative;
 }
 
 .slogan {
@@ -154,7 +153,6 @@ body {
 .btn-primary:hover {
     background: var(--dark-green);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.23);
 }
 
 .btn-secondary {
@@ -188,7 +186,7 @@ body {
     50% { transform: translateY(-20px); }
 }
 
-/* How It Works - FIXED ALIGNMENT */
+/* How It Works - FIXED */
 .how-it-works {
     padding: 5rem 0;
     background: var(--white);
@@ -202,13 +200,17 @@ body {
 }
 
 .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 2rem;
-    align-items: start;
+    flex-wrap: wrap;
 }
 
 .step {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
     text-align: center;
     padding: 2rem 1.5rem;
     background: var(--off-white);
@@ -218,7 +220,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    margin-top: 20px;
 }
 
 .step:hover {
@@ -248,7 +250,7 @@ body {
 .step-image-container {
     width: 100%;
     height: 200px;
-    margin: 1.5rem 0 1rem;
+    margin: 1rem 0;
     border-radius: 15px;
     overflow: hidden;
     background: var(--white);
@@ -278,8 +280,6 @@ body {
     color: var(--gray-600);
     font-size: 0.95rem;
     line-height: 1.6;
-    max-width: 280px;
-    margin: 0 auto;
 }
 
 /* Services */
@@ -431,26 +431,6 @@ body {
     }
 }
 
-.tracking-status {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.status-dot {
-    width: 12px;
-    height: 12px;
-    background: var(--primary-green);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-}
-
 /* Footer */
 .footer {
     background: var(--gray-800);
@@ -502,7 +482,13 @@ body {
 /* Responsive */
 @media (max-width: 968px) {
     .steps {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        width: 100%;
+        max-width: 400px;
     }
 }
 
@@ -531,16 +517,6 @@ body {
     .hero-image {
         max-width: 80%;
         margin-top: 2rem;
-    }
-    
-    .steps {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .step-image-container {
-        height: 180px;
     }
     
     .tracking-form {

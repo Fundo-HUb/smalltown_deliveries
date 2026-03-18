@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmallTown Deliveries - Tap. Track & Enjoy.</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <div class="logo-icon">🚚</div>
+                <i class="fas fa-truck-fast logo-icon"></i>
                 <span class="logo-text">SmallTown Deliveries</span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#areas">Service Areas</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#track">Track Order</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -29,16 +35,45 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> Trusted by 500+ customers
+                </div>
                 <h1>Your Local Delivery <span class="highlight">Simplified</span></h1>
                 <p class="slogan">Tap. Track & Enjoy.</p>
-                <p class="hero-description">Fast, reliable delivery services for your small town. From groceries to packages, we bring convenience to your doorstep.</p>
+                <p class="hero-description">Fast, reliable delivery services for small towns across Gauteng, KwaZulu-Natal and Western Cape. From groceries to packages, we bring convenience to your doorstep.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Get Started</button>
-                    <button class="btn btn-secondary">Track Order</button>
+                    <a href="#services" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </a>
+                    <a href="#track" class="btn btn-secondary">
+                        <i class="fas fa-location-dot"></i> Track Order
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Deliveries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Towns Served</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1526367790999-015075668a5a?w=600&auto=format&fit=crop&q=80" alt="Delivery scooter" class="hero-image">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80" alt="Delivery scooter" class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Order Delivered!</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-clock"></i>
+                    <span>30 min delivery</span>
+                </div>
             </div>
         </div>
     </section>
@@ -46,31 +81,36 @@
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2>How It Works</h2>
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to get anything delivered to your door</p>
+            </div>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <div class="step-image-container">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop&q=80" alt="Tap to order" class="step-image">
+                    <div class="step-icon-wrapper">
+                        <i class="fas fa-mobile-screen"></i>
                     </div>
                     <h3>Tap</h3>
-                    <p>Place your order with a simple tap on our app or website</p>
+                    <p>Place your order with a simple tap on our app or website. Browse groceries, food, packages and more.</p>
                 </div>
+                <div class="step-connector"></div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div class="step-image-container">
-                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&auto=format&fit=crop&q=80" alt="Track delivery" class="step-image">
+                    <div class="step-icon-wrapper">
+                        <i class="fas fa-map-location-dot"></i>
                     </div>
                     <h3>Track</h3>
-                    <p>Monitor your delivery in real-time from pickup to drop-off</p>
+                    <p>Monitor your delivery in real-time from pickup to drop-off. Know exactly when your order arrives.</p>
                 </div>
+                <div class="step-connector"></div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <div class="step-image-container">
-                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&auto=format&fit=crop&q=80" alt="Enjoy delivery" class="step-image">
+                    <div class="step-icon-wrapper">
+                        <i class="fas fa-face-smile"></i>
                     </div>
                     <h3>Enjoy</h3>
-                    <p>Receive your items and enjoy the convenience</p>
+                    <p>Receive your items and enjoy the convenience. Fresh, fast, and right to your doorstep.</p>
                 </div>
             </div>
         </div>
@@ -79,35 +119,168 @@
     <!-- Services -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Whatever you need, we deliver it</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&auto=format&fit=crop&q=80" alt="Grocery delivery" class="service-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&auto=format&fit=crop&q=80" alt="Grocery delivery">
+                        <div class="service-overlay">
+                            <i class="fas fa-basket-shopping"></i>
+                        </div>
                     </div>
                     <h3>Grocery Delivery</h3>
-                    <p>Fresh produce and essentials delivered same-day</p>
+                    <p>Fresh produce and essentials delivered same-day from your local stores</p>
+                    <a href="#" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72?w=400&auto=format&fit=crop&q=80" alt="Package pickup" class="service-image">
+                        <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72?w=400&auto=format&fit=crop&q=80" alt="Package pickup">
+                        <div class="service-overlay">
+                            <i class="fas fa-box"></i>
+                        </div>
                     </div>
                     <h3>Package Pickup</h3>
-                    <p>We collect and deliver your parcels safely</p>
+                    <p>We collect and deliver your parcels safely and securely</p>
+                    <a href="#" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&auto=format&fit=crop&q=80" alt="Food delivery" class="service-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&auto=format&fit=crop&q=80" alt="Food delivery">
+                        <div class="service-overlay">
+                            <i class="fas fa-utensils"></i>
+                        </div>
                     </div>
                     <h3>Food Delivery</h3>
-                    <p>Hot meals from your favorite local restaurants</p>
+                    <p>Hot meals from your favorite local restaurants and takeaways</p>
+                    <a href="#" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop&q=80" alt="Pharmacy delivery" class="service-image">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop&q=80" alt="Pharmacy delivery">
+                        <div class="service-overlay">
+                            <i class="fas fa-pills"></i>
+                        </div>
                     </div>
                     <h3>Pharmacy Runs</h3>
-                    <p>Medications and health essentials at your door</p>
+                    <p>Medications and health essentials delivered discreetly to your door</p>
+                    <a href="#" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="areas" class="areas">
+        <div class="container">
+            <div class="section-header light">
+                <h2>Service Areas</h2>
+                <p>We deliver to small towns across three provinces</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-header">
+                        <i class="fas fa-city"></i>
+                        <h3>Gauteng</h3>
+                    </div>
+                    <ul class="area-towns">
+                        <li><i class="fas fa-location-dot"></i> Heidelberg</li>
+                        <li><i class="fas fa-location-dot"></i> Cullinan</li>
+                        <li><i class="fas fa-location-dot"></i> Magaliesburg</li>
+                        <li><i class="fas fa-location-dot"></i> Parys</li>
+                        <li><i class="fas fa-location-dot"></i> Hartbeespoort</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <div class="area-header">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h3>KwaZulu-Natal</h3>
+                    </div>
+                    <ul class="area-towns">
+                        <li><i class="fas fa-location-dot"></i> Howick</li>
+                        <li><i class="fas fa-location-dot"></i> Ballito</li>
+                        <li><i class="fas fa-location-dot"></i> Scottburgh</li>
+                        <li><i class="fas fa-location-dot"></i> Underberg</li>
+                        <li><i class="fas fa-location-dot"></i> Nottingham Road</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <div class="area-header">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Western Cape</h3>
+                    </div>
+                    <ul class="area-towns">
+                        <li><i class="fas fa-location-dot"></i> Franschhoek</li>
+                        <li><i class="fas fa-location-dot"></i> Stellenbosch</li>
+                        <li><i class="fas fa-location-dot"></i> Greyton</li>
+                        <li><i class="fas fa-location-dot"></i> Paternoster</li>
+                        <li><i class="fas fa-location-dot"></i> McGregor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real stories from real small town deliveries</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally! A delivery service that actually comes to Heidelberg. Got my groceries in 45 minutes. Game changer!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <span>Heidelberg, Gauteng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I run a B&B in Howick and use them for all my guest supplies. Reliable, friendly, and always on time."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>James Nkosi</h4>
+                            <span>Howick, KwaZulu-Natal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                    </div>
+                    <p class="testimonial-text">"My medication gets delivered right to my door in Franschhoek. No more driving to Paarl pharmacy. Thank you!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Margaret van Wyk</h4>
+                            <span>Franschhoek, Western Cape</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,35 +290,152 @@
     <section id="track" class="tracking">
         <div class="container">
             <div class="tracking-box">
-                <h2>Track Your Delivery</h2>
-                <p>Enter your tracking number to see real-time updates</p>
-                <div class="tracking-visual">
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&auto=format&fit=crop&q=80" alt="Tracking app" class="tracking-image">
+                <div class="tracking-header">
+                    <i class="fas fa-truck-fast"></i>
+                    <h2>Track Your Delivery</h2>
+                    <p>Enter your tracking number to see real-time updates</p>
                 </div>
+                
                 <div class="tracking-form">
-                    <input type="text" id="trackingInput" placeholder="Enter tracking number (e.g., STD123456)">
-                    <button onclick="trackOrder()" class="btn btn-primary">Track Now</button>
+                    <div class="input-group">
+                        <i class="fas fa-barcode"></i>
+                        <input type="text" id="trackingInput" placeholder="STD-123456" maxlength="10">
+                    </div>
+                    <button onclick="trackOrder()" class="btn btn-primary btn-large" id="trackBtn">
+                        <span class="btn-text">Track Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
-                <div id="trackingResult" class="tracking-result"></div>
+
+                <div id="trackingResult" class="tracking-result">
+                    <!-- Results appear here -->
+                </div>
+
+                <div class="tracking-features">
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Live Updates</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Secure</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bell"></i>
+                        <span>Notifications</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions? We're here to help. Reach out to us anytime.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:0812669757">081 266 9757</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:hello@smalltown.co.za">hello@smalltown.co.za</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <span>Mon - Sat: 8AM - 8PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>Ready to order?</h3>
+                    <p>Experience the easiest delivery service in your town.</p>
+                    <a href="tel:0812669757" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="tel:0812669757" class="sticky-btn">
+            <i class="fas fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-icon">🚚</div>
-                    <span>SmallTown Deliveries</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>SmallTown Deliveries</span>
+                    </div>
+                    <p class="footer-slogan">Tap. Track & Enjoy.</p>
+                    <p class="footer-about">Bringing big city convenience to small towns across South Africa.</p>
                 </div>
-                <p class="footer-slogan">Tap. Track & Enjoy.</p>
+                
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Contact Us</a>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#areas">Service Areas</a></li>
+                        <li><a href="#track">Track Order</a></li>
+                    </ul>
                 </div>
-                <p class="copyright">&copy; 2026 SmallTown Deliveries. All rights reserved.</p>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Grocery Delivery</a></li>
+                        <li><a href="#">Food Delivery</a></li>
+                        <li><a href="#">Package Pickup</a></li>
+                        <li><a href="#">Pharmacy Runs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 081 266 9757</p>
+                    <p><i class="fas fa-envelope"></i> hello@smalltown.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmallTown Deliveries. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
